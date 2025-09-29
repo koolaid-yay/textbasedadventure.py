@@ -7,7 +7,10 @@ story_point = 1
 rooms = ["outside", 'trap_room']
 health = 4
 
-#adelheiddidthis
+def died(HEALTH):
+    HEALTH = 0
+    return HEALTH
+#adelheiddidthis ^ v
 def dead(HEALTH):
         if HEALTH <= 0:
             print("game over press play again to restart")
@@ -41,9 +44,25 @@ if check == 'y':
     #lucas is sooooooooooooooo weird!!!!!!!!!
         direction=input('now that we missed that trap do you want to go n or w : ')#ian wuz here
         if direction == "n" :
-            print("TEXT")
-        elif direction: "w": #note from ian who wrote this u need to = signs to make it check to see if its n or w = makes itt n or w 
-        print("TEXT")
+            print("you find yourself in a room that is full of crabs. the crabs eat you and you die.") #adelheiddidthis
+            health = died(health)# Meika Milton did the dying code. I wanted to have the two functions that work together and hopefully this works.
+            dead(health)
+        elif direction == "w": #note from ian who wrote this u need to = signs to make it check to see if its n or w = makes itt n or w
+            check=input("You find yourself in a room with a single chest in the center do you open it:")
+            if check == "y": 
+                check = input("you find a dagger in the chest do you take it:")
+                if check == "y":# Meika did the if statement. If they say yes, then we add the dagger to the inventory. Thank you Adelheid!
+                    inventory.append("dagger") #adelheiddidthis
+            else:
+                check=input("i swear to god if you dont take it i will end you, answer wisely:"):
+                while check == "n":
+                    check=input("")
+                    print("")
+                
+else:
+    print("Nah, I'm too tired, I'll come back later or something.")
+
+     
 
 
 
@@ -57,3 +76,4 @@ if check == 'y':
 
 
 
+#i live... again 1 sec im bugging a lot i may crash 
