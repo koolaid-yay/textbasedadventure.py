@@ -41,39 +41,30 @@ if check == 'y':
         dead(health)
     else:
         print('now that i think about it that was probably a trap good call') #ian wuz here
-    #lucas is sooooooooooooooo weird!!!!!!!!!
+    #lucas did the code ian wrote the print statements\/
         direction=input('now that we missed that trap do you want to go n or w : ')#ian wuz here
         if direction == "n" :
             print("you find yourself in a room that is full of crabs. the crabs eat you and you die.") #adelheiddidthis
             health = died(health)# Meika Milton did the dying code. I wanted to have the two functions that work together and hopefully this works.
             dead(health)
         elif direction == "w": #note from ian who wrote this u need to = signs to make it check to see if its n or w = makes itt n or w
-            check=input("You find yourself in a room with a single chest in the center do you open it:")
+            check=input("there is a wooden chest in the center of the room. your curiosity is growing restless. do you open it: ")#ian
             if check == "y": 
-                check = input("you find a dagger in the chest do you take it:")
+                check = input("you find a shiny silver dagger in the chest do you take it:")#ian
                 if check == "y":# Meika did the if statement. If they say yes, then we add the dagger to the inventory. Thank you Adelheid!
                     inventory.append("dagger") #adelheiddidthis
-            else:
-                check=input("i swear to god if you dont take it i will end you, answer wisely:"):
-                while check == "n":
-                    check=input("")
-                    print("")
-                
-else:
-    print("Nah, I'm too tired, I'll come back later or something.")
+            else: # lucas did the code, ian wrote the prints
+                check=input("your curiosity is growing unbearable, do you open the chest : ")#ian
+                while check == "n": # Meika did the loop.
+                    check=input("please just say yes you literally can't go forward if you dont.")#lucas
+                    if check != "y":
+                        break
+                    inventory.append("dagger")
+                    print("It worked maybe?")
+                else:
+                continue
+                    
+        else:
+            print("You stay right where you are-- like an idiot.")                
 
-     
-
-
-
-
-
-#1 sec im bugging out really bad what did u guys do to my code????? my ifs are gone  ok reload i just did o i see its back yippeee 
- #
-
-
-
-
-
-
-#i live... again 1 sec im bugging a lot i may crash 
+    
