@@ -16,7 +16,7 @@ def dead(HEALTH):
             print("game over press play again to restart")
 
 name = input("before you start your journey, please enter your name here : ") #adelheiddidthis
-print("commands n = north w = west e = east s = south i = inventory y = yes n = no") #ian wuz here
+print("commands n = north w = west e = east s = south y = yes n = no") #ian wuz here
 print("In a dry desert lays a massive pyramid. Encompassing you in its shadow. Making a cold resting place for weary travelers. \n")
 print("a torch lays infront of you  half burried in the sand")
 rooms[0]
@@ -52,19 +52,19 @@ if check == 'y':
             if check == "y": 
                 check = input("you find a shiny silver dagger in the chest do you take it:")#ian
                 if check == "y":# Meika did the if statement. If they say yes, then we add the dagger to the inventory. Thank you Adelheid!
-                    inventory.append("dagger") #adelheiddidthis
-            else: # lucas did the code, ian wrote the prints
-                check=input("your curiosity is growing unbearable, do you open the chest : ")#ian
-                while check == "n": # Meika did the loop.
-                    check=input("please just say yes you literally can't go forward if you dont.")#lucas
-                    if check != "y":
-                        break
                     inventory.append("dagger")
-                    print("It worked maybe?")
-                else:
-                continue
+                    print("You have a dagger!") #adelheiddidthis
+                else: # lucas did the code, ian wrote the prints
+                    while check == "n": # Meika did the loop.
+                        check=input("please just say yes you literally can't go forward if you dont : ")#lucas
+                        if check == "y":
+                            inventory.append("dagger")
+                            print("It worked maybe?")
+                            break
+                        else:
+                            continue
                     
         else:
             print("You stay right where you are-- like an idiot.")                
 
-    
+print("Game ended") 
